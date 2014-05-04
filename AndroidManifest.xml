@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="org.gc.gts" android:versionCode="1" android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name=".GtsActivity" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<meta-data android:name="server" android:value="" />
+		</activity>
+	<activity android:name="org.gc.gts.SettingsDialog" android:label="@string/menu_settings"></activity>
+
+	    <service android:name="org.gc.gts.logger.OpenGTStracker" android:enabled="true">
+    <intent-filter android:label="GTSlogger">
+				<action android:name="org.gc.gts.logger.intent.action.OpenGTSlogger"></action>
+	</intent-filter>
+    </service>
+
+
+<receiver android:permission="android.permission.RECEIVE_BOOT_COMPLETED" android:enabled="true" android:name="org.gc.gts.util.BootReceiver"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"></action>
+</intent-filter>
+</receiver>
+
+<receiver class="ro.sysopconsulting.util.NetworkStateReceiver" android:name="org.gc.gts.util.NetworkStateReceiver" android:permission="android.permission.ACCESS_NETWORK_STATE">
+    <intent-filter>
+            <action android:name="android.net.ConnectivityManager.CONNECTIVITY_ACTION" />
+    </intent-filter>
+</receiver>
+
+<receiver android:name="org.gc.gts.util.WifiStateReceiver">
+    <intent-filter>
+            <action android:name="android.net.wifi.WifiManager.NETWORK_STATE_CHANGED_ACTION" />
+    </intent-filter>
+</receiver>
+
+
+	</application>
+
+<uses-sdk android:minSdkVersion="13" />
+
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"></uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"></uses-permission>
+
+
+
+
+
+
+</manifest>

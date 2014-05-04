@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+   <PreferenceCategory
+        android:title="@string/preference_behavior">
+        <ListPreference
+            android:key="precision"
+            android:title="@string/precision_title"
+            android:summary="@string/precision_summary"
+            android:entries="@array/precision_choices"
+            android:entryValues="@array/precision_values" android:defaultValue="1"/>
+
+		<CheckBoxPreference android:key="use_wifi"
+			android:title="@string/wifi_title" android:summary="@string/wifi_summary"
+			android:defaultValue="true" />
+		<ListPreference android:title="Zoom Levels" 
+			android:key="ZOOM_LEVEL" 
+			android:entryValues="@array/zoom_values" 
+			android:entries="@array/zoom_choices" android:enabled="true"></ListPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/preference_Skytrace">
+		<EditTextPreference android:summary="@string/account_summary" android:title="@string/account_title" android:key="account"></EditTextPreference>
+		<EditTextPreference android:summary="@string/user_summary" android:title="@string/user_title" android:key="user"></EditTextPreference>
+		<EditTextPreference android:summary="@string/password_summary" android:title="@string/password_title" android:key="password"></EditTextPreference>
+	</PreferenceCategory>
+</PreferenceScreen>
