@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SkyTrace Basic Locator</string>
+    <string name="app_name">aGTS</string>
 	<string name="my_location">My location</string>
 	<string name="map_mode">Map mode</string>
 	<string name="about">About</string>
@@ -9,7 +9,7 @@
 	<string name="info">Info</string>
 	<string name="route">Route</string>
 	
-	<string name="server">track.skytrace.com:8080</string>
+	<string name="server"></string>
 	<string name="account_title">Billing Account ID</string>
 	<string name="account_summary">not the same as a username</string>
 	<string name="account"></string>
